@@ -2,18 +2,13 @@
 
 This is a set of 99 Scala problems of various levels of difficulty.
 
-Translations:
-
-* [French](README.fr.md)
-* [Korean](README.ko.md)
-
 ## Instructions
 
 1. Get a copy of this repo
-2. Read the [problems list][problems-en]
+2. Read the [problems list][problems-ko]
 3. Solve 'em ;)
 
-[problems-en]: https://github.com/99XProblems/99-Scala-Problems/blob/master/docs/problems.en.md
+[problems-ko]: https://github.com/99XProblems/99-Scala-Problems/blob/master/docs/problems.ko.md
 
 ### With Git & GitHub
 
