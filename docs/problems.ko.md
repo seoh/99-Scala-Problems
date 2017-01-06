@@ -1,23 +1,20 @@
 # 99 Scala Problems
 
-These tests are a modified version of [Phil Gold’s list][pgold].
+여기 테스트들은 [필 골드의 문제 목록][pgold]을 수정한 버전입니다.
 
 [pgold]: http://aperiodic.net/phil/scala/s-99/
 
-## Writing a solution
+## 문제 풀기
 
-Each problem has two files: one for its implementation, the other for its
-tests.
+각 문제들에는 파일 두개가 있습니다: 하나는 구현체고, 다른 하나는 그 테스트입니다. 
 
-The implementation for problem `<N>` is in `src/main/scala/P<N>.scala` while
-its tests are in `src/test/scala/P<N>Spec.scala`.
+문제 `<N>`에 대한 구현은 `src/main/scala/P<N>.scala` 파일에 있고, 그 테스트는 
+`src/test/scala/P<N>Spec.scala`에 있습니다.
 
-Write your solution as a method on the object `P<N>`. You can anything you like
-in the file to answer the problem.
+`object P<N>`의 메소드로 답안을 만듭니다. 답안을 위해서 파일 안에 원하는 것은 아무거나 추가해도 괜찮습니다.
 
-Tests are written with [ScalaTest][scalatest]. Open the
-`src/test/scala/P<N>Spec.scala` file, and in the `P<N>Spec` class use the
-following syntax:
+테스트들은 [ScalaTest][scalatest]용입니다. `src/test/scala/P<N>Spec.scala` 파일을 열고
+`P<N>Spec` 클래스 안에 아래와 같은 문법으로 작성되어 있습니다:
 
 ```scala
 "the_name_of_your_method" should "something it should do" in {
@@ -31,19 +28,19 @@ it should "something else it should do" in {
 // more tests
 ```
 
-Each test can use `assert` to check for expected values:
+각각의 테스트는 `assert`를 사용해 예상한 값을 확인할 수 있습니다:
 
 ```scala
 assert(some_result == expected_value)
 ```
 
-Read [ScalaTest’s docs][scalatestdocs] for more info.
+더 자세한 정보는 [ScalaTest’s docs][scalatestdocs]를 읽어보세요.
 
 [scalatest]: http://www.scalatest.org/user_guide/writing_your_first_test
 [scalatestdocs]: http://www.scalatest.org/user_guide/using_assertions
 
-For example, given a problem P00 asking us to write a function `id` which
-returns its argument, the `P00.scala` file will look like this:
+만약 문제 P00이 인자를 리턴하는 함수 `id`를 작성하는 것이라면 `P00.scala` 파일은 이렇게
+작성할 수 있습니다:
 
 ```scala
 package org.p99.scala
@@ -55,7 +52,7 @@ object P00 {
 }
 ```
 
-The `P00Spec.scala` file might look like this:
+그리고 `P00Spec.scala` 파일은 이런 식으로 작성할 수 있습니다:
 
 ```scala
 package org.p99.scala
@@ -81,29 +78,29 @@ class P01Spec extends UnitSpec {
 ```
 
 
-## Test
+## 테스트
 
-Start `sbt` in the project directory:
+프로젝트 디렉토리에서 `sbt`를 입력하세요:
 
     $ sbt
 
-Then type `test` to test. You can also use `sbt test` from the command-line but
-that’s longer since the JVM has to be started everytime.
+그리고 테스트를 하려면 `test`를 입력하세요. 혹은 `sbt test`를 바로 입력해서 테스트를 할 수도 있지만,
+실행할 때마다 JVM을 띄워야해서 더 느립니다.
 
-Use `test-only org.p99.scala.P00Spec` to test only the problem `00`.
+문제 `00`만 테스트해보려면 `test-only org.p99.scala.P00Spec`를 입력하세요.
 
-### Problems
+### 문제
 
-### P01 (easy)
+### P01 (쉬움)
 
-Find the last element of a list.
+리스트의 마지막 요소를 찾습니다.
 
-Example:
+예시:
 
     scala> last(List(1, 1, 2, 3, 5, 8))
     res0: Int = 8
 
-### P02 (easy)
+### P02 (쉬움)
 
 Find the last but one element of a list.
 
